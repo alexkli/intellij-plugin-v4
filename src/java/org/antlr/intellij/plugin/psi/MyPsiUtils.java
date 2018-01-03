@@ -77,6 +77,11 @@ public class MyPsiUtils {
                 if(node==null)return false;
                 return tokenSet.contains(node.getElementType());
             }
+
+            @Override
+			public boolean test(@javax.annotation.Nullable PsiElement input) {
+				return this.apply(input);
+			}
         };
     }
 
